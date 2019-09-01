@@ -1,0 +1,117 @@
+<!-- размечаем одну башню, используя переданные с сервера данные -->
+<div class="indicator">
+  <span class="indicator__label">Уровень карналита в силосной башне №{{data.id + 1}}</span>
+  <span class="indicator__status {{data.percents < 100 ? 'indicator__status--green' : 'indicator__status--red'}}">{{data.percents}}%</span>
+  <svg class="indicator__item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 154.6 495.8">
+    <defs>
+      <style>
+        .cls-1,
+        .cls-13 {
+          fill: none;
+        }
+
+        .cls-2 {
+          fill: #cbcbcb;
+        }
+
+        .cls-3 {
+          clip-path: url(#clip-path);
+        }
+
+        .cls-4 {
+          fill: url(#gradient_5);
+        }
+
+        .cls-5 {
+          clip-path: url(#clip-path-2);
+        }
+
+        .cls-6 {
+          fill: url(#gradient_5-2);
+        }
+
+        .cls-7 {
+          clip-path: url(#clip-path-3);
+        }
+
+        .cls-8 {
+          fill: url(#gradient_5-3);
+        }
+
+        .cls-9 {
+          clip-path: url(#clip-path-4);
+        }
+
+        .cls-10 {
+          fill: url(#gradient_5-4);
+        }
+
+        .cls-11 {
+          fill: url(#gradient_5-5);
+        }
+
+        .cls-12 {
+          fill: #21b249;
+          opacity: 0.5;
+          isolation: isolate;
+        }
+
+        .cls-13 {
+          stroke: #8b959f;
+          stroke-miterlimit: 22.93;
+          stroke-width: 4px;
+        }
+      </style>
+      <clipPath id="clip-path" transform="translate(-882.7 -292.6)">
+        <rect class="cls-1" x="891.4" y="306" width="137.3" height="91.9" />
+      </clipPath>
+      <linearGradient id="gradient_5" x1="894.73" y1="730.05" x2="1028.69" y2="730.05"
+        gradientTransform="matrix(1, 0, 0, -1, -882.7, 789.4)" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#616166" />
+        <stop offset="0.21" stop-color="#9b9b9b" />
+        <stop offset="1" stop-color="#48484f" />
+      </linearGradient>
+      <clipPath id="clip-path-2" transform="translate(-882.7 -292.6)">
+        <rect class="cls-1" x="891.4" y="407.5" width="137.3" height="91.9" />
+      </clipPath>
+      <linearGradient id="gradient_5-2" x1="894.73" y1="628.55" x2="1028.69" y2="628.55"
+        xlink:href="#gradient_5" />
+      <clipPath id="clip-path-3" transform="translate(-882.7 -292.6)">
+        <rect class="cls-1" x="891.4" y="508.9" width="137.3" height="91.9" />
+      </clipPath>
+      <linearGradient id="gradient_5-3" x1="894.73" y1="527.15" x2="1028.69" y2="527.15"
+        xlink:href="#gradient_5" />
+      <clipPath id="clip-path-4" transform="translate(-882.7 -292.6)">
+        <rect class="cls-1" x="891.4" y="610.4" width="137.3" height="91.9" />
+      </clipPath>
+      <linearGradient id="gradient_5-4" x1="894.73" y1="425.65" x2="1028.69" y2="425.65"
+        xlink:href="#gradient_5" />
+      <linearGradient id="gradient_5-5" x1="891.4" y1="331.9" x2="1028.7" y2="331.9"
+        xlink:href="#gradient_5" />
+    </defs>
+    <rect class="cls-2" y="6.3" width="154.6" height="4.3" />
+    <g class="cls-3">
+      <rect class="cls-4" x="8.7" y="13.4" width="137.3" height="91.9" />
+    </g>
+    <polyline class="cls-2" points="154.6 416.4 0 416.4 0 412.1 154.6 412.1" />
+    <g class="cls-5">
+      <rect class="cls-6" x="8.7" y="114.9" width="137.3" height="91.9" />
+    </g>
+    <g class="cls-7">
+      <rect class="cls-8" x="8.7" y="216.3" width="137.3" height="91.9" />
+    </g>
+    <g class="cls-9">
+      <rect class="cls-10" x="8.7" y="317.8" width="137.3" height="91.9" />
+    </g>
+    <polygon class="cls-11" points="68.6 495.8 8.7 419.2 146 419.2 86 495.8 68.6 495.8" />
+    <rect class="cls-12" x="18.9" [attr.y]="410 - (100 * data.value / 1200) * 4" width="118.5" [attr.height]="(100 * data.value / 1200) * 4" />
+    <rect class="cls-2" y="209.2" width="154.6" height="4.3" />
+    <rect class="cls-2" y="310.6" width="154.6" height="4.3" />
+    <rect class="cls-2" y="107.7" width="154.6" height="4.3" />
+    <line class="cls-13" x1="53.8" y1="2" x2="100.9" y2="2" />
+  </svg>
+  <span class="indicator__label">Масса карналита</span>
+  <span class="indicator__status {{data.percents < 100 ? 'indicator__status--green' : 'indicator__status--red'}}">{{data.value.toLocaleString().replace(',', ' ')}}</span>
+</div>
+

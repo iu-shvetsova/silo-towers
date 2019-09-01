@@ -1,0 +1,6 @@
+<!-- отрисовываем все башни, передавая данные с сервера -->
+<div class="app-indicator">
+  <div *ngFor='let item of indicators'>
+    <app-indicator [data]='item'></app-indicator>
+  </div>
+</div>
